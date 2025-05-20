@@ -1,0 +1,455 @@
+#root {
+    width: 100%;
+    margin: auto;
+}
+
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Barra de navegación */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: rgba(229, 214, 243, 1);
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgba(165, 89, 237, 1);
+    margin: 0 15px;
+    font-weight: 600;
+    
+} 
+
+.nav-link:hover{
+    color: #666;
+}
+
+
+
+/* Botón de registrare */
+.btn-primary {
+    background-color: rgba(165, 89, 237, 1);
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: rgba(191, 162, 219, 1);
+    border-color: rgba(165, 89, 237, 1);
+}
+
+/* Botón de inicio de sesión */
+.btn-outline-primary {
+    color: rgba(165, 89, 237, 1); 
+    border-color: rgba(165, 89, 237, 1); 
+    background-color: transparent; 
+    height: 40px;
+  }
+  
+  .btn-outline-primary:hover {
+    color: #fff; 
+    background-color: rgba(165, 89, 237, 1); 
+    border-color: rgba(165, 89, 237, 1); }
+  
+
+
+/* Sección principal */
+.hero-section {
+
+    text-align: center;
+    padding: 50px;
+    color: rgba(165, 89, 237, 1) !important;
+    font-size: 4px;
+    font-weight: 1000 !important; 
+    margin-bottom: 1rem;
+
+}
+
+
+.hero h1 {
+    color: rgba(165, 89, 237, 1);
+    font-size: 4rem;
+    font-weight: bold ;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.fondo{
+    background-image: image-set('../image/mat3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.fondo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(239, 227, 250, 0.6), rgba(240, 229, 250, 0.6)); 
+    z-index: 1; 
+}
+
+.fondo .row {
+    position: relative;
+    z-index: 2; }
+
+
+.hero-content {
+    opacity: 0; 
+    animation: fadeIn 1s ease-in-out forwards; 
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #333;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    transform: translateY(-20px); 
+    animation: slideIn 1s ease-in-out forwards; 
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* Sobre Nosotros */
+.Nosotros {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: white;
+}
+
+.Nosotros img {
+    height: 500px;
+    width: 500px;
+    border-radius: 15px;
+}
+
+.Nosotros-text {
+    width: 50%;
+}
+
+/* Clases */
+.clases {
+    padding: 50px;
+    background-color: rgba(229, 214, 243, 1);
+}
+
+.clases-card {
+    display: inline-block;
+    background-color:rgba(229, 214, 243, 1);
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.clases-card:hover {
+    background-color: rgba(165, 89, 237, 1);
+}
+
+.recuadro{
+    background-color:rgba(191, 162, 219, 1);
+    height: 60px;
+    width: 300px;
+    padding-top: 15px;
+    padding-left: 30px;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    color: rgba(165, 89, 237, 1);
+    text-align: center;
+    ;
+
+}
+
+.morado{
+    padding-left: 50%;
+}
+
+
+/* Estilos generales */
+.fondo {
+    background-image: url('/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .fondo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 0;
+  }
+  
+  .hero-section {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Sección de clases  */
+  .clases-preview {
+    background-color: #f8f9fa;
+  }
+  
+  .clases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .clase-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .clase-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .clase-img-container {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .clase-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .clase-card:hover .clase-img-container img {
+    transform: scale(1.05);
+  }
+  
+  .clase-info {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .clase-info h3 {
+    color: #6f42c1;
+    margin-bottom: 10px;
+  }
+  
+  /* Sección de precios  */
+  .precios-preview {
+    background-color: #f0e9fa;
+  }
+  
+  .precios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+  }
+  
+  .paquete-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .paquete-card h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .precio {
+    font-size: 2rem;
+    color: #6f42c1;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  .precio span {
+    font-size: 1rem;
+    color: #666;
+    font-weight: normal;
+  }
+  
+  .paquete-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .paquete-card li {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .clases-grid,
+    .precios-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero-section {
+      padding: 60px 0;
+    }
+  }
+
+  /* Estilos para la sección Sobre Nosotros */
+.sobre-nosotros {
+    background-color: #fff;
+  }
+  
+  .sobre-nosotros h2 {
+    color: #6f42c1;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+  }
+  
+  .sobre-nosotros h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #6f42c1;
+  }
+  
+  .valores-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .valores-list li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+  }
+  
+  .valores-list li::before {
+    content: '✓';
+    color: #6f42c1;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+  
+  .porque-elegirnos {
+    border-left: 4px solid #6f42c1;
+  }
+  
+  .porque-elegirnos h5 {
+    font-weight: 600;
+  }
+  
+.sobre-nosotros .row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .sobre-nosotros img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+    margin-left: auto; 
+    display: block;
+  }
+  
+  /*  para las listas */
+  .valores-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .valores-list li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+  }
+  
+  .valores-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236f42c1'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E");
+    background-size: contain;
+  }
+  
+  @media (max-width: 992px) {
+    .sobre-nosotros .row {
+      flex-direction: column;
+    }
+    
+    .sobre-nosotros img {
+      margin: 30px auto 0;
+      max-width: 90%;
+    }
+  }
+
+  .titulo-morado {
+    color: #6f42c1 !important; 
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }

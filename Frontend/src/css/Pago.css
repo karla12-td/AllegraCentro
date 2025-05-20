@@ -1,0 +1,88 @@
+/* Pago.css */
+.d-flex {
+  display: flex;
+}
+.min-vh-100 {
+  min-height: 100vh;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-center {
+  justify-content: center;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.card-header {
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.form-control {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  padding: 12px;
+  font-weight: 500;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-success {
+  color: #28a745;
+}
+
+.rounded-3 {
+  border-radius: 0.5rem;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.p-5 {
+  padding: 3rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}

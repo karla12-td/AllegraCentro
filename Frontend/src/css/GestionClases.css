@@ -1,0 +1,311 @@
+/* Colores principales de Allegra */
+:root {
+    --allegra-primary: #6f42c1;
+    --allegra-secondary: #8a4fff;
+    --allegra-light: #f0e9fa;
+    --allegra-dark: #4a2d7a;
+    --allegra-accent: #e1d4f7;
+  }
+  
+  /* Estilos generales */
+  .gestion-clases-container {
+    background-color: #f8f9fa;
+  }
+  
+  .titulo-principal {
+    color: var(--allegra-primary);
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(111, 66, 193, 0.1);
+  }
+  
+  .titulo-principal::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--allegra-primary), var(--allegra-secondary));
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  .subtitulo {
+    color: var(--allegra-dark);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Estilos para tarjetas */
+  .card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+  }
+  
+  .card-header {
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 1rem 1.5rem;
+  }
+  
+  .bg-allegra {
+    background: linear-gradient(135deg, var(--allegra-primary), var(--allegra-secondary)) !important;
+  }
+  
+  /* Botones */
+  .btn-allegra {
+    background: linear-gradient(135deg, var(--allegra-primary), var(--allegra-secondary));
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(111, 66, 193, 0.2);
+  }
+  
+  .btn-allegra:hover {
+    background: linear-gradient(135deg, var(--allegra-dark), var(--allegra-primary));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(111, 66, 193, 0.3);
+    color: white;
+  }
+  
+  /* Formulario */
+  .form-container {
+    border-top: 4px solid var(--allegra-secondary);
+  }
+  
+  .form-label {
+    font-weight: 500;
+    color: var(--allegra-dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  .select-custom, .form-control {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    transition: all 0.3s;
+    background-color: #fff;
+  }
+  
+  .select-custom:focus, .form-control:focus {
+    border-color: var(--allegra-primary);
+    box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.25);
+    outline: none;
+  }
+  
+  /* Calendario */
+  .calendar-container {
+    margin-top: 2rem;
+    border-top: 4px solid var(--allegra-secondary);
+  }
+  
+  .rbc-calendar {
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: inherit;
+  }
+  
+  /* Barra de herramientas */
+  .rbc-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: var(--allegra-light);
+    border-radius: 8px;
+    gap: 10px;
+  }
+  
+  .rbc-btn-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-calendar-nav, .btn-calendar-view, .btn-calendar-today {
+    background-color: white;
+    border: 1px solid var(--allegra-primary);
+    color: var(--allegra-primary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+  }
+  
+  .btn-calendar-nav:hover, .btn-calendar-view:hover {
+    background-color: var(--allegra-accent);
+  }
+  
+  .btn-calendar-today {
+    font-weight: 600;
+  }
+  
+  .btn-calendar-view.active, .rbc-active {
+    background-color: var(--allegra-primary) !important;
+    color: white !important;
+    border-color: var(--allegra-primary) !important;
+  }
+  
+  .rbc-toolbar-label {
+    font-weight: 600;
+    color: var(--allegra-dark);
+    font-size: 1.2rem;
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  /* Cabeceras */
+  .rbc-header {
+    background-color: var(--allegra-light);
+    color: var(--allegra-dark);
+    padding: 12px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    border-bottom: 2px solid var(--allegra-accent);
+  }
+  
+  .rbc-today {
+    background-color: rgba(138, 79, 255, 0.1);
+  }
+  
+  /* Eventos */
+  .rbc-event {
+    padding: 2px 5px;
+    overflow: hidden;
+  }
+  
+  .rbc-event-content {
+    padding: 3px;
+    line-height: 1.3;
+  }
+  
+  .event-details {
+    font-size: 0.75rem;
+    margin-top: 3px;
+    opacity: 0.9;
+    line-height: 1.2;
+  }
+  
+  /* Vistas específicas */
+  .rbc-month-view {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .rbc-month-row {
+    min-height: 100px;
+  }
+  
+  .rbc-date-cell {
+    padding: 5px;
+  }
+  
+  .rbc-off-range-bg {
+    background-color: #f9f9f9;
+  }
+  
+  .rbc-time-view {
+    border-radius: 8px;
+  }
+  
+  .rbc-time-header {
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+  }
+  
+  .rbc-time-content {
+    border-radius: 0 0 8px 8px;
+    background-color: white;
+  }
+  
+  .rbc-agenda-view table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .rbc-agenda-view th {
+    background-color: var(--allegra-light);
+    color: var(--allegra-dark);
+    padding: 10px;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  .rbc-agenda-view td {
+    padding: 10px;
+    border-bottom: 1px solid var(--allegra-accent);
+  }
+  
+  .rbc-agenda-time-cell {
+    color: var(--allegra-primary);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .calendar-container {
+      overflow-x: auto;
+    }
+    
+    .rbc-calendar {
+      min-width: 600px;
+    }
+    
+    .form-container {
+      padding: 1rem;
+    }
+    
+    .card-header {
+      padding: 0.75rem 1rem;
+      font-size: 1.1rem;
+    }
+  
+    .rbc-toolbar {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .rbc-toolbar-label {
+      order: -1;
+      width: 100%;
+    }
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .card {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  /* Spinner */
+  .spinner-border.text-allegra {
+    color: var(--allegra-primary);
+    width: 3rem;
+    height: 3rem;
+  }
+
+
+  
